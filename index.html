@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./sortingAlgorithm.js"></script>
+
+    <select name="" id="selectDuplicated" onchange="conditionSelected()">
+        <option value="false" disabled selected hidden>Duplicated</option>
+        <option value="true">True</option>
+        <option value="false">False</option>
+    </select>
+    <select name="" id="selectSortAlgorithm" onchange="conditionSelected()">
+        <option value="0" disabled selected hidden>Sort Algorithm</option>
+        <option value="0">Bubble Sort</option>
+        <option value="1">Selection Sort</option>
+        <option value="2">Insertion Sort</option>
+        <option value="3">Merger Sort</option>
+        <option value="4">Quick Sort</option>
+        <option value="5">Heap Sort</option>
+        <option value="6">Bucket Sort</option>
+        <option value="7">Shell Sort</option>
+        <option value="8">PigenHole Sort</option>
+        <option value="9">BinaryTree Sort</option>
+        <option value="10">Radix Sort</option>
+        <option value="11">Cocktail Sort</option>
+    </select>
+    <select name="" id="selectReverse" onchange="conditionSelected()">
+        <option value="false" disabled selected hidden>Reverse</option>
+        <option value="true">True</option>
+        <option value="false">False</option>
+    </select>
+    <button onclick="sortArray()">Sort</button>
+    <main></main>
+</body>
+</html>
