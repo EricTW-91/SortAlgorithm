@@ -1,6 +1,4 @@
-const listLength = 100;
-// let duplicatedList = new Array;
-// let unduplicatedList = new Array;
+const listLength = 20000;
 let reverseArray = "false";
 let selectedAlgorithm = "0";
 let duplicated = "false";
@@ -43,6 +41,10 @@ function conditionSelected(){
 }
 
 function sortArray(){
+    let startT;
+    let endT;
+    startT = new Date().getTime();
+
     let resultArray = new Array;
     
     if(duplicated == "true"){
@@ -91,11 +93,14 @@ function sortArray(){
         
     }
 
+    endT = new Date().getTime();
+
     if(reverseArray == "false"){
+        document.getElementById("sortTime").innerHTML = `Duration time: ${endT-startT} mm`;
         document.querySelector("main").innerHTML = resultArray;
     }else if(reverseArray == "true"){
-        resultArray = resultArray.reverse();
-        document.querySelector("main").innerHTML = resultArray;
+        document.getElementById("sortTime").innerHTML = `Duration time: ${endT-startT} mm`;
+        document.querySelector("main").innerHTML = resultArray.reverse();
     }
 
 }
@@ -116,7 +121,6 @@ function bubbleSort(array){
         }
         count++;
     }
-
     return array;
 }
 
@@ -161,5 +165,5 @@ function insertionSort(array){
 
 // 4. Merger sort(damn hard)
 function mergerSort(array, l, r){
-    
+
 }
